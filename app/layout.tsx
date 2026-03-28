@@ -2,8 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bouncing Dots",
-  description: "Homepage animation preview",
+  title: "Artyom Demidov | Full Stack Developer",
+  description:
+    "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
+  icons: {
+    icon: "/branding/demidovs-mark.svg",
+    shortcut: "/branding/demidovs-mark.svg",
+    apple: "/branding/demidovs-mark.svg",
+  },
 };
 
 export default function RootLayout({
@@ -12,10 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,0 +1,14 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#0B0E15"/>
+  <rect x="72" y="72" width="1456" height="856" rx="36" fill="#111827" stroke="#243042"/>
+  <rect x="112" y="122" width="1376" height="88" rx="22" fill="#1B2331"/>
+  <rect x="112" y="254" width="442" height="610" rx="28" fill="#151D2A"/>
+  <rect x="590" y="254" width="414" height="290" rx="28" fill="#18283A"/>
+  <rect x="1038" y="254" width="450" height="290" rx="28" fill="#18283A"/>
+  <rect x="590" y="574" width="898" height="290" rx="28" fill="#151D2A"/>
+  <rect x="144" y="302" width="378" height="222" rx="24" fill="#CBD5E1"/>
+  <rect x="618" y="292" width="220" height="22" rx="11" fill="#F8FAFC"/>
+  <rect x="1068" y="292" width="220" height="22" rx="11" fill="#F8FAFC"/>
+  <rect x="618" y="606" width="260" height="22" rx="11" fill="#F8FAFC"/>
+  <text x="112" y="102" fill="#93C5FD" font-family="Arial, sans-serif" font-size="26" letter-spacing="4">DRIVEFORA</text>
+</svg>
