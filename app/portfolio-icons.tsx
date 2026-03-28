@@ -247,3 +247,24 @@ export function DemidovsMarkIcon() {
     </svg>
   );
 }
+
+export function CarScrollIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 14.5 7.2 9A2.2 2.2 0 0 1 9.25 7.6h5.5A2.2 2.2 0 0 1 16.8 9l2.2 5.5" />
+      <path d="M4.5 14.5h15a1.5 1.5 0 0 1 1.5 1.5v1.25A1.25 1.25 0 0 1 19.75 18.5h-15.5A1.25 1.25 0 0 1 3 17.25V16a1.5 1.5 0 0 1 1.5-1.5Z" />
+      <circle cx="7.5" cy="17" r="1.2" />
+      <circle cx="16.5" cy="17" r="1.2" />
+      <path d="M10 10.6h4" />
+    </svg>
+  );
+}
+
+export function MouseScrollIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="7" y="3.5" width="10" height="17" rx="5" />
+      <path className="mouse-wheel" d="M12 7v4" />
+    </svg>
+  );
+}

@@ -28,6 +28,7 @@ import {
   GithubIcon,
   LayersIcon,
   LinkedinIcon,
+  MouseScrollIcon,
   PanelIcon,
   ShieldIcon,
   SunIcon,
@@ -65,7 +66,7 @@ export default function Home() {
           <p className="hero-sub">
             Building web apps, REST APIs and dashboards with focus on
             <br />
-            <strong>design, speed and stability.</strong> 3+ years of experience.
+            <strong>design, speed and stability.</strong> 2+ years of experience.
           </p>
           <div className="hero-cta">
             <a href="#projects" className="btn-fill">
@@ -76,7 +77,10 @@ export default function Home() {
             </a>
             <a href="#contact" className="btn-line">Get in touch</a>
           </div>
-          <div className="scroll-hint"><span>Scroll</span><div className="scroll-line" /></div>
+          <a href="#about" className="scroll-hint" aria-label="Scroll to about">
+            <div className="scroll-car"><MouseScrollIcon /></div>
+            <div className="scroll-line" />
+          </a>
         </section>
 
         <div className="divider" />
@@ -89,8 +93,8 @@ export default function Home() {
                   <div className="about-av">AD</div>
                   <p className="about-txt">I&apos;m a Full Stack Developer who cares about both code quality and the end result. I build things that work fast, look clean and are easy to maintain. My stack is centered around Next.js, TypeScript and Python - but I adapt to what the project needs.</p>
                   <div className="about-stats">
-                    <StatCard value="3+" label="Years exp" />
-                    <StatCard value="4" label="Projects" />
+                    <StatCard value="2+" label="Years exp" />
+                    <StatCard value="20+" label="Projects" />
                     <StatCard value="8+" label="Technologies" />
                   </div>
                 </div>
@@ -219,14 +223,6 @@ export default function Home() {
           </div>
         </section>
 
-        <footer>
-          <div className="wrap">
-            <div className="foot-inner">
-              <div className="foot-name">Artyom Demidov</div>
-              <div className="foot-copy">© 2025 · Built with care</div>
-            </div>
-          </div>
-        </footer>
       </main>
     </>
   );

@@ -55,9 +55,12 @@ header.scrolled .nav { padding: 8px 14px; background: color-mix(in srgb, var(--b
 .btn-fill:hover { background: var(--surface-solid-hover); transform: translateY(-2px); box-shadow: var(--shadow-soft); }
 .btn-line { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: 100px; font-size: 14px; font-weight: 400; color: color-mix(in srgb, var(--text) 68%, transparent); border: 1px solid var(--line-strong); background: var(--surface-2); transition: all 0.25s ease; }
 .btn-line:hover { color: var(--text); border-color: color-mix(in srgb, var(--line-strong) 160%, transparent); background: var(--surface-3); transform: translateY(-2px); }
-.scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 7px; opacity: 0; animation: fadeUp 0.7s 1.1s cubic-bezier(0.16,1,0.3,1) forwards; }
-.scroll-hint span { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: color-mix(in srgb, var(--text) 20%, transparent); }
-.scroll-line { width: 1px; height: 38px; background: linear-gradient(to bottom,transparent,color-mix(in srgb, var(--text) 28%, transparent)); animation: grow 2s ease-in-out infinite; }
+.scroll-hint { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; opacity: 0; animation: fadeUp 0.7s 1.1s cubic-bezier(0.16,1,0.3,1) forwards; }
+.scroll-car { width: 52px; height: 52px; border-radius: 18px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--line-strong); background: color-mix(in srgb, var(--surface-2) 72%, transparent); color: color-mix(in srgb, var(--text) 74%, transparent); box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); animation: carFloat 2.2s ease-in-out infinite; }
+.scroll-car svg { width: 22px; height: 22px; }
+.scroll-car .mouse-wheel { transition: transform 0.18s ease, opacity 0.18s ease; transform-box: fill-box; transform-origin: center; }
+.scroll-hint:active .mouse-wheel { transform: translateY(3px); opacity: 0.35; }
+.scroll-line { width: 1px; height: 34px; background: linear-gradient(to bottom,color-mix(in srgb, var(--text) 8%, transparent),color-mix(in srgb, var(--text) 28%, transparent)); animation: grow 2s ease-in-out infinite; }
 
 section { padding: 96px 0; position: relative; z-index: 2; }
 .divider { width: 100%; height: 1px; background: linear-gradient(90deg,transparent,var(--line),transparent); }
@@ -146,9 +149,8 @@ section { padding: 96px 0; position: relative; z-index: 2; }
 .soc svg { width: 13px; height: 13px; }
 .soc:hover { color: var(--text); border-color: var(--line-strong); background: var(--surface-3); transform: translateY(-2px); }
 
-footer { position: relative; z-index: 2; padding: 24px 0 34px; border-top: 1px solid var(--line); }
-.foot-inner { display: flex; align-items: center; justify-content: space-between; }
-.foot-name { font-family: "Syne", "Arial Black", "Segoe UI", sans-serif; font-weight: 800; font-size: 13.5px; color: color-mix(in srgb, var(--text) 32%, transparent); }
+footer { position: relative; z-index: 2; padding: 30px 0 42px; border-top: 1px solid var(--line); }
+.foot-inner { display: flex; align-items: center; justify-content: center; padding: 10px 0 0; text-align: center; }
 .foot-copy { font-size: 12px; color: color-mix(in srgb, var(--text) 22%, transparent); }
 
 .project-page { position: relative; min-height: 100vh; background: var(--bg); color: var(--text); overflow: hidden; }
@@ -203,6 +205,7 @@ footer { position: relative; z-index: 2; padding: 24px 0 34px; border-top: 1px s
 @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
 @keyframes shimmer { 0% { background-position: 220% center; } 100% { background-position: -220% center; } }
 @keyframes grow { 0%,100% { transform: scaleY(1); opacity: 0.5; } 50% { transform: scaleY(1.35); opacity: 1; } }
+@keyframes carFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 @keyframes projects-marquee { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 9px)); } }
 
 @media (max-width: 860px) {
