@@ -5,6 +5,20 @@ export const metadata: Metadata = {
   title: "Artyom Demidov | Full Stack Developer",
   description:
     "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
+  applicationName: "Artyom Demidov Portfolio",
+  openGraph: {
+    title: "Artyom Demidov | Full Stack Developer",
+    description:
+      "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
+    type: "website",
+    siteName: "Artyom Demidov Portfolio",
+  },
+  twitter: {
+    card: "summary",
+    title: "Artyom Demidov | Full Stack Developer",
+    description:
+      "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
+  },
   icons: {
     icon: "/branding/demidovs-mark.svg",
     shortcut: "/branding/demidovs-mark.svg",
