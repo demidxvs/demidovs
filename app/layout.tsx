@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.demidovs.com"),
   title: "Artyom Demidov | Full Stack Developer",
   description:
     "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
   applicationName: "Artyom Demidov Portfolio",
   openGraph: {
+    url: "https://www.demidovs.com",
     title: "Artyom Demidov | Full Stack Developer",
     description:
       "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
