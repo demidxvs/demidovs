@@ -206,6 +206,9 @@ export default function Home() {
                 </p>
               </section>
             </div>
+            <div className="hero-cta reveal" style={{ justifyContent: "flex-start", marginTop: "18px", animation: "none", opacity: 1 }}>
+              <Link href="/demidovs" className="btn-fill">Open Demidovs Page</Link>
+            </div>
           </div>
         </section>
 
