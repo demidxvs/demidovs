@@ -132,10 +132,10 @@ export default function Home() {
         </header>
 
         <section id="hero">
-          <div className="hero-badge"><div className="badge-dot" />Currently open to new projects</div>
+          <div className="hero-badge"><div className="badge-dot" />Demidovs is currently open to new projects</div>
           <h1 className="hero-name"><span className="shimmer">Artyom Demidov</span></h1>
           <p className="hero-sub">
-            Building web apps, REST APIs and dashboards with focus on
+            Building under the <strong>Demidovs</strong> brand: web apps, REST APIs and dashboards with focus on
             <br />
             <strong>design, speed and stability.</strong> 2+ years of experience.
           </p>
@@ -162,7 +162,7 @@ export default function Home() {
               <div className="reveal">
                 <div className="about-card">
                   <div className="about-av">AD</div>
-                  <p className="about-txt">I&apos;m a Full Stack Developer who cares about both code quality and the end result. I build things that work fast, look clean and are easy to maintain. My stack is centered around Next.js, TypeScript and Python - but I adapt to what the project needs.</p>
+                  <p className="about-txt">I&apos;m Artyom Demidov, the developer behind <strong>Demidovs</strong> - a personal full stack development brand focused on products that are fast, clear, and maintainable. My stack is centered around Next.js, TypeScript, and Python, but the goal stays the same: ship work that looks sharp, performs well, and holds up in production.</p>
                   <div className="about-stats">
                     <StatCard value="2+" label="Years exp" />
                     <StatCard value="20+" label="Projects" />
@@ -183,12 +183,40 @@ export default function Home() {
 
         <div className="divider" />
 
+        <section id="brand">
+          <div className="wrap">
+            <div className="reveal">
+              <div className="eyebrow">Demidovs</div>
+              <h2 className="sec-title">A Personal Development Brand</h2>
+              <p className="sec-desc">
+                <strong>Demidovs</strong> is the portfolio brand of Artyom Demidov, focused on full stack development, product execution, and digital work that is built to last.
+              </p>
+            </div>
+            <div className="project-detail-grid reveal" style={{ transitionDelay: "0.1s" }}>
+              <section className="project-panel">
+                <div className="project-panel-title">What Demidovs means</div>
+                <p className="project-panel-text">
+                  Demidovs stands for practical product work: clear interfaces, stable backend systems, clean code, and delivery that does not fall apart after launch.
+                </p>
+              </section>
+              <section className="project-panel">
+                <div className="project-panel-title">Who is behind it</div>
+                <p className="project-panel-text">
+                  Artyom Demidov leads the work personally, from frontend and backend implementation to architecture, integrations, SEO fundamentals, and production delivery.
+                </p>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <div className="divider" />
+
         <section id="projects">
           <div className="wrap">
             <div className="reveal">
-              <div className="eyebrow">Portfolio</div>
+              <div className="eyebrow">Demidovs Portfolio</div>
               <h2 className="sec-title">Recent Projects</h2>
-              <p className="sec-desc">A few products I designed and shipped.</p>
+              <p className="sec-desc">Selected products designed and shipped under the Demidovs brand.</p>
             </div>
             <div className="projects-marquee reveal">
               <div className="projects-slider">
@@ -213,9 +241,9 @@ export default function Home() {
         <section id="services">
           <div className="wrap">
             <div className="services-intro reveal">
-              <div className="eyebrow">What I do</div>
+              <div className="eyebrow">What Demidovs builds</div>
               <h2 className="sec-title">Full Stack<br />Development</h2>
-              <p className="sec-desc">I build websites and panels, REST APIs and backend - with focus on speed, design and stability.</p>
+              <p className="sec-desc">Demidovs builds websites, admin panels, REST APIs, and backend systems with focus on speed, design, and stability.</p>
               <div className="tech-pills">
                 <span className="tpill"><DatabaseAtomIcon />DB: PostgreSQL · Redis · Prisma</span>
                 <span className="tpill"><DeployIcon />Deploy: PM2 · CI/CD · Nginx</span>
@@ -277,9 +305,9 @@ export default function Home() {
           <div className="wrap">
             <div className="contact-center">
               <div className="reveal">
-                <div className="eyebrow">Let&apos;s work</div>
+                <div className="eyebrow">Work with Demidovs</div>
                 <h2 className="sec-title">Ready to Start<br />a Project?</h2>
-                <p className="sec-desc contact-desc">Have an idea or need a developer? Drop me a message - I read everything.</p>
+                <p className="sec-desc contact-desc">Need a developer or want to work with Demidovs? Drop me a message - I read everything myself.</p>
               </div>
               <div className="ccard reveal">
                 <div className="c-email">dev@demidovs.com</div>
