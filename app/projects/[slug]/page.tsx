@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getProjectBySlug, projects } from "@/lib/projects";
+import { SITE_NAME } from "@/lib/site";
 import { CartIcon, ChartIcon, DumbbellIcon, ShieldIcon } from "@/app/portfolio-icons";
 
 type ProjectPageProps = {
@@ -18,13 +19,42 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
   if (!project) {
     return {
-      title: "Project Not Found | Artyom Demidov",
+      title: "Project Not Found",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
+  const description = project.overview ?? project.cardDescription;
+  const title = `${project.name} Case Study`;
+
   return {
-    title: `${project.name} | Artyom Demidov`,
-    description: project.cardDescription,
+    title,
+    description,
+    alternates: {
+      canonical: `/projects/${project.slug}`,
+    },
+    openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      url: `/projects/${project.slug}`,
+      siteName: SITE_NAME,
+      type: "article",
+      images: [
+        {
+          url: project.previewImage,
+          alt: `${project.name} preview`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      images: [project.previewImage],
+    },
   };
 }
 

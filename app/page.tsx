@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import {
@@ -14,6 +15,15 @@ import {
 import PortfolioEffects from "@/components/ui/portfolio-effects";
 import SectionNav from "@/components/ui/section-nav";
 import { projects } from "@/lib/projects";
+import {
+  CONTACT_EMAIL,
+  HOME_DESCRIPTION,
+  HOME_TITLE,
+  PERSON_NAME,
+  SITE_NAME,
+  SITE_URL,
+  SOCIAL_LINKS,
+} from "@/lib/site";
 import {
   ApiIcon,
   BoltIcon,
@@ -35,9 +45,70 @@ import {
   TelegramIcon,
 } from "./portfolio-icons";
 
+const homeStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      alternateName: PERSON_NAME,
+      inLanguage: "en",
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: PERSON_NAME,
+      url: SITE_URL,
+      email: CONTACT_EMAIL,
+      jobTitle: "Full Stack Developer",
+      sameAs: SOCIAL_LINKS,
+      knowsAbout: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "PostgreSQL",
+        "Supabase",
+        "SEO",
+      ],
+    },
+  ],
+};
+
+export const metadata: Metadata = {
+  title: {
+    absolute: HOME_TITLE,
+  },
+  description: HOME_DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    url: "/",
+    siteName: SITE_NAME,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+  },
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeStructuredData),
+        }}
+      />
       <main className="portfolio-page">
         <PortfolioEffects />
         <canvas id="canvas" />

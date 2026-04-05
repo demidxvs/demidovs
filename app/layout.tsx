@@ -1,25 +1,50 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import {
+  HOME_DESCRIPTION,
+  HOME_TITLE,
+  PERSON_NAME,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.demidovs.com"),
-  title: "Artyom Demidov | Full Stack Developer",
-  description:
-    "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
-  applicationName: "Artyom Demidov Portfolio",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: HOME_TITLE,
+    template: "%s | Demidovs",
+  },
+  description: HOME_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: PERSON_NAME, url: SITE_URL }],
+  creator: PERSON_NAME,
+  publisher: SITE_NAME,
+  category: "portfolio",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    url: "https://www.demidovs.com",
-    title: "Artyom Demidov | Full Stack Developer",
-    description:
-      "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
+    url: "/",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     type: "website",
-    siteName: "Artyom Demidov Portfolio",
+    siteName: SITE_NAME,
   },
   twitter: {
     card: "summary",
-    title: "Artyom Demidov | Full Stack Developer",
-    description:
-      "Portfolio website for a full stack developer building websites, dashboards, APIs, and admin panels.",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
   },
   icons: {
     icon: "/branding/demidovs-mark.svg",
