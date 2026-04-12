@@ -235,7 +235,6 @@ export const projects: Project[] = [
       "Combined premium UI direction with practical maintainability for long-term product development.",
     ],
     liveUrl: "https://www.mdblight.com/en",
-    status: "Completed",
   },
   {
     slug: "atmos",
