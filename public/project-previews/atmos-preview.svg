@@ -1,0 +1,11 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4B1880"/>
+      <stop offset="1" stop-color="#24113A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="160" y="190" width="1280" height="520" rx="28" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.22)"/>
+  <text x="250" y="520" fill="#E6DDF2" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="240" font-weight="700" letter-spacing="-4">Atmos</text>
+</svg>

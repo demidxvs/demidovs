@@ -172,6 +172,7 @@ export const projects: Project[] = [
       "Keeps the interface simple and fast to use in the gym.",
       "Helps estimate volume and intensity for strength sessions.",
     ],
+    liveUrl: "https://benchpress-calculator.vercel.app/",
   },
   {
     slug: "mdb-light",
@@ -180,12 +181,12 @@ export const projects: Project[] = [
     logoImage: "/project-previews/mdb-light-logo.svg",
     previewImage: "/project-previews/mdb-light.png",
     cardDescription:
-      "Multilingual LED lighting marketplace concept with premium storefront, admin workflows, and Stripe-ready ecommerce structure.",
+      "Full-stack multilingual LED marketplace with product catalog, admin workflows, SEO architecture, and Stripe/Supabase-ready commerce foundation.",
     intro:
-      "A commercial marketplace concept for the LED lighting industry, designed as a scalable storefront that can grow into a full ecommerce product.",
+      "A production-oriented multilingual marketplace for LED lighting, built with a structured catalog, operational admin area, and ecommerce architecture prepared for real business workflows.",
     overview:
-      "MDB Light is a multilingual marketplace concept focused on LED lighting products. I built it as a premium storefront with category-driven product discovery, a structured catalog, and a hidden admin area prepared for real operational workflows. The architecture is meant to support further growth into a complete ecommerce system with order processing, payment integration, multilingual content management, and scalable backend logic.",
-    role: "Marketplace frontend, multilingual UX, admin architecture, ecommerce-ready product design",
+      "MDB Light is not just a visual showcase. I built it as a full product architecture for a real niche marketplace: multilingual storefront pages, category-based product discovery, SEO-ready structure, and admin-focused operational flows. The project includes a practical foundation for product management, pricing updates, and content maintenance across multiple languages, plus backend and payment direction aligned with Supabase and Stripe. The result is a business-ready base that can move from portfolio case to fully deployed ecommerce operations without rewriting the core platform model.",
+    role: "Full-stack product architecture, multilingual marketplace UX, catalog modeling, admin system planning, SEO foundation",
     stack: [
       "Next.js 16",
       "React 19",
@@ -217,15 +218,64 @@ export const projects: Project[] = [
         tone: "cobalt",
         items: ["Stripe", "Orders", "Pricing", "Product management"],
       },
+      {
+        title: "Delivery & Quality",
+        tone: "neutral",
+        items: ["SEO metadata", "Schema-ready structure", "Scalable architecture", "Production-minded UX"],
+      },
     ],
     highlights: [
-      "Designed as a multilingual marketplace for a real commercial niche.",
-      "Built around category-based product discovery and premium product presentation.",
-      "Prepared for admin workflows covering products, descriptions, orders, and pricing.",
-      "Structured to evolve from a storefront into a full ecommerce platform.",
-      "Planned with Stripe payments and Supabase-backed operations from the start.",
+      "Designed and implemented as a multilingual marketplace for a real commercial LED lighting domain.",
+      "Built a structured product catalog model with category-driven browsing and scalable listing hierarchy.",
+      "Prepared operational admin flows for product data, descriptions, pricing updates, and order-related management.",
+      "Set up a technical direction for secure authentication and backend workflows using Supabase architecture.",
+      "Aligned commerce layer with Stripe-based payment integration strategy for online checkout expansion.",
+      "Shaped the project as a production-minded platform, not a one-page promo or static demo.",
+      "Defined the platform to support future business growth without rebuilding the information architecture.",
+      "Combined premium UI direction with practical maintainability for long-term product development.",
     ],
-    status: "In Progress",
+    liveUrl: "https://www.mdblight.com/en",
+    status: "Completed",
+  },
+  {
+    slug: "atmos",
+    name: "Atmos",
+    icon: "shield",
+    logoImage: "/project-previews/atmos-wordmark.svg",
+    previewImage: "/project-previews/atmos.png",
+    cardDescription:
+      "Modern web experience with strong visual identity, clear interaction flow, and production-ready frontend delivery.",
+    intro:
+      "Atmos is a polished product website focused on visual clarity, fast navigation, and a clean conversion-oriented layout.",
+    overview:
+      "Atmos was built as a frontend-first product site with emphasis on branding consistency, responsive behavior, and user flow quality. The project focuses on premium presentation, smooth interaction states, and scalable structure so new sections and marketing pages can be added without redesigning the foundation.",
+    role: "Frontend development, UI implementation, responsive behavior, visual system execution",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    stackGroups: [
+      {
+        title: "Frontend",
+        tone: "violet",
+        items: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      },
+      {
+        title: "Experience",
+        tone: "amber",
+        items: ["Responsive layout", "Interaction states", "Visual consistency"],
+      },
+      {
+        title: "Delivery",
+        tone: "cobalt",
+        items: ["Production build", "SEO-ready structure", "Scalable page architecture"],
+      },
+    ],
+    highlights: [
+      "Built and shipped a clean branded interface with consistent visual language.",
+      "Implemented responsive behavior across desktop and mobile breakpoints.",
+      "Structured page sections for easy future expansion of product and marketing content.",
+      "Focused on fast UI rendering and smooth interaction patterns.",
+    ],
+    liveUrl: "https://atmos-temp.vercel.app/",
+    status: "Completed",
   },
 ];
 

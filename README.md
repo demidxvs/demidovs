@@ -1,50 +1,63 @@
-### Short Project Description
+# Atmos Temp
 
-`MDB Light` is a multilingual marketplace concept for LED lighting products. The project is designed as a modern ecommerce platform with a public storefront, structured product catalog, protected admin area, and future integration with payments, order management, and multilingual content workflows.
+A modern, animated weather monitoring web app. Search any city to see real-time temperature, humidity, wind speed, and conditions with beautiful animated backgrounds.
 
-This case demonstrates how a product-focused frontend can be prepared for a real business domain: catalog browsing, product presentation, user flows, operational admin tools, and backend-ready architecture.
+## Features
 
-### Portfolio Description (EN)
+- **Real-time weather** from wttr.in and Open-Meteo (both free, no API key)
+- **Animated backgrounds** — rain, snow, sun, clouds, thunderstorm particles
+- **Glassmorphism UI** with smooth Framer Motion transitions
+- **Debounced search** with input validation
+- **Responsive** — works on mobile and desktop
+- **All SVG icons** — no emoji
 
-MDB Light is a commercial web application concept for the LED lighting industry. I built it as a scalable marketplace interface with multilingual UX, category-based product discovery, and a clean premium visual system. The project is structured to grow from a marketing-driven storefront into a full ecommerce product with catalog management, admin workflows, order processing, and payment integration.
+## Tech Stack
 
-### Stack
+Next.js 16 · React 19 · TypeScript · TailwindCSS · Framer Motion · TanStack Query · Jest
 
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- Framer Motion
-- Lucide React
-- Supabase
-- Stripe
+## Quick Start
 
-### What This Project Shows
+```bash
+npm install
+npm run dev
+```
 
-- building multilingual ecommerce storefronts
-- designing category-driven marketplaces
-- creating product-focused landing pages with premium UI
-- preparing admin panels for product, order, and content management
-- planning integrations with backend services and payment systems
+Open [http://localhost:3000](http://localhost:3000).
 
-### Types Of Applications I Build
+## Project Structure
 
-Based on this project, the portfolio positioning is strongest around:
+```
+src/
+├── app/
+│   ├── api/weather/route.ts   # Server-side proxy (avoids CORS)
+│   ├── layout.tsx              # Root layout with React Query provider
+│   └── page.tsx                # Main client page
+├── components/
+│   ├── WeatherSearch.tsx       # Search input with debounce
+│   ├── WeatherCard.tsx         # Weather data display (SVG icons)
+│   ├── WeatherDisplay.tsx      # Orchestrates background + content
+│   ├── AnimatedBackground.tsx  # Gradient + weather particles
+│   ├── particles/              # Rain, Snow, SunRays, Clouds, Lightning
+│   └── ui/                     # Icons, LoadingSkeleton, ErrorMessage
+├── hooks/
+│   ├── useDebounce.ts          # Generic debounce hook
+│   └── useWeather.ts           # Search + fetch with React Query
+├── lib/
+│   ├── api.ts                  # Client-side API caller
+│   └── constants.ts            # Shared constants
+└── types/weather.ts            # TypeScript interfaces
+```
 
-- ecommerce websites and marketplaces
-- multilingual business websites
-- product catalogs and showcase platforms
-- admin panels and internal management tools
-- customer-facing web apps with payment and order flows
-- niche commercial platforms for retail, interiors, lighting, furniture, and similar product businesses
+## API
 
-## Product Decisions Fixed For Now
+No API key needed. The app uses two free providers with automatic fallback:
 
-These assumptions should be treated as the default until changed:
+1. **wttr.in** (primary) — simple, no registration
+2. **Open-Meteo** (fallback) — open-source weather data
 
-- project type: LED lighting marketplace
-- payment system: Stripe
-- database/backend: Supabase
-- admin panel: hidden custom URL plus real authentication
-- multilingual support: 4 languages
-- admin can manage products, descriptions, orders, and pricing
+All external calls go through a Next.js route handler at `/api/weather` to avoid CORS issues.
+
+
+
+# atmos-weather
+# atmos-temp
